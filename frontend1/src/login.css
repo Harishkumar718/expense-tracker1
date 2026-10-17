@@ -1,0 +1,107 @@
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f5fb;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  padding: 32px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+}
+
+.login-card h2 {
+  margin: 0 0 8px;
+  color: #222;
+  font-size: 28px;
+}
+
+.login-subtitle {
+  margin: 0 0 28px;
+  color: #666;
+  font-size: 14px;
+}
+
+.login-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.login-field label {
+  color: #333;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.login-field input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d8dbe5;
+  border-radius: 8px;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+.login-field input:focus {
+  outline: none;
+  border-color: #5149e3;
+  box-shadow: 0 0 0 3px rgba(81, 73, 227, 0.12);
+}
+
+.login-btn {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 8px;
+  background-color: #5149e3;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.login-btn:hover {
+  background-color: #4038c9;
+}
+
+.login-message {
+  margin: 16px 0 0;
+  color: #555;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.auth-switch {
+margin: 20px 0 0;
+text-align: center;
+color: #666;
+font-size: 14px;
+}
+
+.auth-switch button {
+margin-left: 5px;
+padding: 0;
+border: none;
+background: none;
+color: #5149e3;
+font-size: inherit;
+font-weight: 600;
+cursor: pointer;
+}
+
+.auth-switch button:hover {
+    color: #4038c9;
+    text-decoration: underline;
+}

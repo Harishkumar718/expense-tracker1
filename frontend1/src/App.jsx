@@ -9,6 +9,8 @@ import './App.css'
 import Login from './login'
 import Register from './register';
 
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
+
 function App(){
   const [title,setTitle] = useState('');
   const [amount, setAmount] = useState('');
@@ -41,7 +43,7 @@ function App(){
     
 
 
-    const response = await fetch("http://localhost:3000/api/expenses",{
+    const response = await fetch(`${API_URL}/api/expenses`,{
       method : "GET",
       headers  : {
         "Authorization":`Bearer ${token}`
@@ -61,7 +63,7 @@ function App(){
 
   const handleDelete = async (id) => {
     const token = localStorage.getItem('token');
-    const response = await fetch(`http://localhost:3000/api/expenses/${id}`,{
+    const response = await fetch(`${API_URL}/api/expenses/${id}`,{
       method:"DELETE",
       headers:{
         "Authorization": `Bearer ${token}`
@@ -76,7 +78,7 @@ function App(){
   };
   const handleUpdate = async (id,newTitle) => {
     const token = localStorage.getItem('token');
-    const response = await fetch(`http://localhost:3000/api/expenses/${id}`,{
+    const response = await fetch(`${API_URL}/api/expenses/${id}`,{
       method : "PATCH",
       headers : {
         "Authorization":`Bearer ${token}`,
@@ -97,8 +99,8 @@ function App(){
     const token = localStorage.getItem("token");
 
     const response = await fetch( editingId
-    ? `http://localhost:3000/api/expenses/${editingId}`
-    : "http://localhost:3000/api/expenses",{
+    ? `${API_URL}/api/expenses/${editingId}`
+  : `${API_URL}/api/expenses`,{
       method: editingId ? "PATCH" : "POST", 
       body:JSON.stringify({
         title:title,

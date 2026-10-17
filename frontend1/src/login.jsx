@@ -2,6 +2,8 @@ import { useState } from "react";
 import './login.css'
 import Register from './register';
 
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
+
 function Login({setIsLoggedIn}){
     const [email,setEmail] = useState(''); 
     const [password,setPassword] = useState('');
@@ -15,7 +17,7 @@ function Login({setIsLoggedIn}){
         e.preventDefault();
         setPassword('');
         setEmail('');
-        const response = await fetch("http://localhost:3000/api/auth/login", {
+        const response = await fetch(`${API_URL}/api/auth/login`, {
             method: "POST",
             body:JSON.stringify({
                 email:email,

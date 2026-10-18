@@ -240,7 +240,7 @@ function App(){
           <h2 className="page-title">Dashboard Overview</h2>
           <section className="dashboard-heading">
             
-            <p>Track and manage your spending</p>
+            <p  >Track and manage your spending</p>
               <section className='summary-cards'>
                 <div className='summary-card'>
                   <p> <Wallet size={18} color="#5149e3" />   Total Expenses</p>

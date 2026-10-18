@@ -477,64 +477,91 @@ font-size: 14px;
     grid-column: 1/-1;
   }
   .summary-cards {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:  repeat(2, minmax(0, 1fr));
+    gap: 10px;
   }
   .main-content {
-    padding: 15px;
+    padding: 12px;
   }
   .app-header {
-  padding: 15px;
-  margin-bottom: 15px;
+  padding: 11px;
+  margin-bottom: 12px;
+}
+.app-header h1 {
+  font-size: 20px;
+  line-height: 1.3;
+}
+.page-title{
+   font-size: 19px;
+  line-height: 1.3;
+}
+.dashboard-heading p {
+  font-size: 16px;
+  line-height: 1.4;
 }
 
 
 
-  .summary-card p {
-  font-size: 13px;
+
+
+
+ .summary-card {
+  padding: 12px 10px;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.summary-card p {
+  font-size: 12px;
+  line-height: 1.5;
   margin-bottom: 6px;
+  overflow-wrap: anywhere;
+}
+
+.summary-card h3 {
+  font-size: 18px;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
 }
 
 .expense-form-section h2 {
   margin-bottom: 7px;
-  font-size: 17px;
+  font-size: 16.12px;
 }
 
 
 .expense-form {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 15px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 12px;
 }
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
   min-width: 0;
 }
 .form-group label {
-  font-size: 13.5px;
+  font-size: 13px;
   font-weight: 600;
   color: black;
 }
-.form-group input {
-  padding: 10px;
-  border: 1px solid #979494;
-  border-radius: 8px;
-  font-size: 13px;
-  width: 100%;
+.form-group input,
+.form-group select {
+
+   width: 100%;
+  min-width: 0;
   box-sizing: border-box;
+  padding: 10px 8px;
+  font-size: 13px;
+  border-radius: 8px;
 }
 .expense-form button {
-  background-color: #5149e3;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 8px;
+  grid-column: 1 / -1;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 11px;
   font-size: 13px;
-  font-weight: 600;
-  cursor: pointer;
-
-  grid-column: 1 / 3;
   
 }
 .dashboard-heading h3 {
@@ -549,11 +576,16 @@ font-size: 14px;
   }
 
 .expense-list {
-    padding: 10px;
+    grid-template-columns: minmax(0, 1fr);
+    padding: 0px;
+    
+
   }
 
   .expense-card {
     padding: 12px;
+    min-width: 0;
+    overflow-wrap: anywhere;
   }
 
   .edit-btn,
@@ -564,9 +596,17 @@ font-size: 14px;
 
   .expense-amount {
     font-size: 16px;
+    font-weight: 700;
+    overflow-wrap: anywhere;
   }
   .expenses-section {
-  padding: 14px;
+  padding: 8px;
+}
+.expense-actions {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .expense-list-header {
@@ -577,7 +617,7 @@ font-size: 14px;
     gap: 10px;
   }
    .expense-list-header h2 {
-    font-size: 18px;
+    font-size: 16.5px;
     text-align: center;
     min-width: 0;
   }
@@ -585,8 +625,8 @@ font-size: 14px;
    .expense-list-header .add-expense-btn {
     position: absolute;
     right: 0;
-    padding: 9px 11px;
-    font-size: 12px;
+    padding: 8px 9px;
+    font-size: 11px;
     white-space: nowrap;
   }
 

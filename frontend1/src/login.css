@@ -25,6 +25,10 @@
   font-size: 28px;
 }
 
+.input-field{
+  
+}
+
 .login-subtitle {
   margin: 0 0 28px;
   color: #666;
@@ -47,6 +51,9 @@
 .login-field input {
   width: 100%;
   padding: 12px;
+   background-color: #ffffff;
+  color: #222222;
+   color-scheme: light;
   border: 1px solid #d8dbe5;
   border-radius: 8px;
   font-size: 15px;

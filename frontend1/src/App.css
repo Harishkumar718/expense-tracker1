@@ -468,7 +468,7 @@ font-size: 14px;
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 854px) {
   .expense-form {
     grid-template-columns: minmax(0, 1fr);
   }
